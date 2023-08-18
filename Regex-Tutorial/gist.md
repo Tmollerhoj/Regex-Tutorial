@@ -28,7 +28,7 @@ Example email regex: /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/
 
 ### Anchors
 
-Anchors are used to mark ^ the beginning and $ end of the string being matched. 
+Anchors are used to mark "^" the beginning and "$" end of the string being matched. 
 
 If we look at our email regex we can see how it is used in the following:
 
@@ -64,20 +64,50 @@ In our regex "\d" would match numerical characters after the "@".
 
 ### Flags
 
+Flags are modifiers that alter how a regex pattern is interpreted, and are placed after the second slash. They can change the behavior of the pattern matching process. Common flags include "g" global search, "i" case-insensitive search, and "m" multi-line search.
 
+However, we do not use flags in our regex.
 
 ### Grouping and Capturing
 
+Grouping is essentially the use of parenthesis to group patterns together to create subexpressions, use quantifiers, or to capture text for matching. In our email example it is mainly used for creating subexpressions to better organize our regex.
+
+([a-z0-9_\.-]+)
+
+([\da-z\.-]+)
+
+([a-z\.]{2,6})
+
 ### Bracket Expressions
+
+Bracket expressions are actually a part of character classes. By using "[]" we define a range of characters accepted by our regex. 
+
+For Example:
+
+[a-z0-9_\.-] Matches alphanumeric characters, periods and dashes.
+
+[\da-z\.-] Matches alphanumeric characters, periods and dashes.
+
+[a-z\.] Matches alphabetic characters and periods.
 
 ### Greedy and Lazy Match
 
+By default regex is greedy, matching as many instances as possible. By using the quantifier "?" it becomes lazy because it only matches  0 or 1 times. However, it is not used in our example.
+
 ### Boundaries
+
+The boundary or "\b" is an anchor like "^" and "$", but it is used specifically to mark the boundaries of words. However, it is not used in our example.
 
 ### Back-references
 
+Back-references allow you to refer to previously captured groups within the regex pattern. However, it is not used in our example.
+
 ### Look-ahead and Look-behind
+
+Look-ahead and look-behind assertions allow you to check for patterns that are followed by or preceded by another pattern, without including the latter in the match. However, it is not used in our example.
 
 ## Author
 
-A short section about the author with a link to the author's GitHub profile (replace with your information and a link to your profile)
+Thomas Mollerhoj
+
+https://github.com/Tmollerhoj
